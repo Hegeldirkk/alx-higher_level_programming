@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 for n in range(97,123):
-    a = chr(n)
-    print("{}".format(a), end="")
+    print("{}".format(chr(n)),end="")
