@@ -9,11 +9,6 @@ class Rectangle:
         self.height = height
         self.width = width
 
-    def area(self):
-        """calcul area of retangle"""
-        area = (self.__height * self.__width)
-        return area
-
     @property
     def width(self):
         """property width retreive it"""
@@ -41,6 +36,11 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """calcul area of retangle"""
+        area = (self.__height * self.__width)
+        return area
 
     def perimeter(self):
         """calcul perimeter of retangle"""
