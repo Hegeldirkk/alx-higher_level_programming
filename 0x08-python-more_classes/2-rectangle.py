@@ -42,7 +42,6 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
             self.__height = value
 
-
         def perimeter(self):
             """calcul perimeter of retangle"""
             if self.__height == 0 and self.__width == 0:
