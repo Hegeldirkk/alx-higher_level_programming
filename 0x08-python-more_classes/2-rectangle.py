@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Write a class Rectangle (based on 0-rectangle.py)"""
+"""Write a class Rectangle (based on 1-rectangle.py)"""
 
 
 class Rectangle:
@@ -8,6 +8,11 @@ class Rectangle:
         """Initstate function rectangle"""
         self.height = height
         self.width = width
+
+        def area(self):
+            """calcul area of retangle"""
+            area = (self.__height * self.__width)
+            return area
 
         @property
         def width(self):
@@ -36,3 +41,11 @@ class Rectangle:
             if value < 0:
                 raise ValueError("height must be >= 0")
             self.__height = value
+
+
+        def perimeter(self):
+            """calcul perimeter of retangle"""
+            if self.__height == 0 and self.__width == 0:
+                return 0
+            else:
+                return ((self.__height + self.__width) * 2)
