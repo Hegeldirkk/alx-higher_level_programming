@@ -6,8 +6,8 @@ class Rectangle:
     """Retreive width and heigth in Rectangle class"""
     def __init__(self, width=0, height=0):
         """Initstate function rectangle"""
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     def area(self):
         """calcul area of retangle"""
