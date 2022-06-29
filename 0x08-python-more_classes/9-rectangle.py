@@ -13,6 +13,11 @@ class Rectangle:
         self.width = width
         type(self).number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new Rectangle instance"""
+        return Rectangle(size, size)
+
     @property
     def width(self):
         """property width retreive it"""
@@ -93,8 +98,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """Returns a new Rectangle instance"""
-        return Rectangle(size, size)
