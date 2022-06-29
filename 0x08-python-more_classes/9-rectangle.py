@@ -87,8 +87,8 @@ class Rectangle:
         """
         biggest rectangle based on the area
         args:
-        rect_1 = instance of Rectangle
-        rect_2 = instance of Rectangle
+            rect_1 = instance of Rectangle
+            rect_2 = instance of Rectangle
         """
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
