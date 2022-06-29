@@ -50,3 +50,6 @@ TypeError Edge cases:
 	Traceback (most recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
+	>>> add_integer(999e9999, 1)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
