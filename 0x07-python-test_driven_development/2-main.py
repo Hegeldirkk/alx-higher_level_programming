@@ -7,4 +7,4 @@ matrix = [
 ]
 print(matrix_divided(matrix, 3))
 print(matrix)
-print(matrix_divided())
+print(matrix_divided(1, 3))
