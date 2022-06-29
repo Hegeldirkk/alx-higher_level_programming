@@ -46,3 +46,7 @@ TypeError Edge cases:
 	>>> add_integer(a, 123)
 	Traceback (most recent call last):
 	NameError: name 'a' is not defined
+	>>> add_integer(float('nan'), 0)
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
