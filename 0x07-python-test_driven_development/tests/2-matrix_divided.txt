@@ -1,0 +1,31 @@
+# 2-matrix_divided.txt
+
+=============================
+ how to use 2-matrix_divided.py
+=============================
+
+    Using ``matrix_divided``
+-----------------------------
+
+Firstly import matrix_divided from 2-matrix_divided
+	
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now you can use it:
+
+	>>> matrix = [[2, 3, 5],[1, 5, 9]]
+
+TypeError that you can find:
+
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+	>>> matrix_divided(["&", 1, 2], 2)
+	Traceback (most recent call last):
+        ...
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
+	>>> matrix_divided([2, 1, 2], "a")
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
