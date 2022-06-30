@@ -7,11 +7,9 @@ function that print my name
 
 def say_my_name(first_name, last_name=""):
     """
-    Print sentenses with 
-    the first and last name
+    Print sentenses with the first and last name
 
-    Args: 
-        first_name
+    Args: first_name
         last_name
     """
     if type(first_name) is not str:
