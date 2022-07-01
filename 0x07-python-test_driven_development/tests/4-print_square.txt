@@ -18,6 +18,7 @@ Now you can use it:
 	####
 	####
 	####
+
 	>>> print_square(0)
 
 	>>> print_square(-2)
