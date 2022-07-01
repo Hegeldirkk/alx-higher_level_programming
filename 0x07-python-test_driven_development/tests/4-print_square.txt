@@ -21,10 +21,10 @@ Now you can use it:
 	####
 	>>> print_square(0)
 
-	>>> print_square(-2)
+	>>> print_square(-689)
 	Traceback (most recent call last):
 	...
-	ValueError: size must be >= 0
+	TypeError: size must be >= 0
 	>>> print_square(-1.2)
 	Traceback (most recent call last):
         ...
