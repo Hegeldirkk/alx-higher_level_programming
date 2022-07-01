@@ -10,8 +10,17 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
+    count = 0
+    toget = ""
     characters = [".", "?", ":"]
-    for n in text:
-        print("{}".format(n), end='')
-        if n in characters:
-            print("", end='\n\n')
+    for n in range(len(text)):
+        if text[n] in characters:
+            toget += text[n] + '\n\n'
+        else:
+            if (n != 0 and
+                (text[n - 1] in characters or text[n - 1] is ' ') and
+               text[n] is ' '):
+                    pass
+            else:
+                    toget += text[n]
+    print(toget, end="")
