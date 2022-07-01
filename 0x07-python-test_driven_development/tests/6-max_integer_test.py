@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
 
     def test_upper(self):
@@ -23,6 +24,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_milieu(self):
         self.assertEqual(max_integer([1, 0, 4, 2, 6]), 8)
+
 
 if __name__ == '__main__':
     unittest.main()
