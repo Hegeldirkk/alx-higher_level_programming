@@ -18,8 +18,8 @@ def text_indentation(text):
             toget += text[n] + '\n\n'
         else:
             if (n != 0 and
-                (text[n - 1] in characters or text[n - 1] is ' ') and
-               text[n] is ' '):
+                (text[n - 1] in characters or text[n - 1] == ' ') and
+               text[n] == ' '):
                 pass
             else:
                 toget += text[n]
