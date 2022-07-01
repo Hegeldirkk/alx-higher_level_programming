@@ -20,7 +20,7 @@ def text_indentation(text):
             if (n != 0 and
                 (text[n - 1] in characters or text[n - 1] is ' ') and
                text[n] is ' '):
-                    pass
+                pass
             else:
-                    toget += text[n]
+                toget += text[n]
     print(toget, end="")
