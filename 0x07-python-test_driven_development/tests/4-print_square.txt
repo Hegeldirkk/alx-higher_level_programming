@@ -13,13 +13,12 @@ Firstly import print_square from 4-print_square
 
 Now you can use it:
 
+	correct input
 	>>> print_square(4)
-	
 	####
 	####
 	####
 	####
-
 	>>> print_square(0)
 
 	>>> print_square(-2)
