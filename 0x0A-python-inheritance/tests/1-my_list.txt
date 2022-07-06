@@ -31,4 +31,7 @@ Now you can use it:
 	empty list
 	>>> MyList.print_sorted([])
 	[]
-
+	
+	is instance
+	>>> isinstance(MyList([]), list)
+	True
