@@ -11,4 +11,4 @@ print(my_list)
 my_list.print_sorted()
 print(my_list)
 
-MyList.print_sorted([1, 2, -3, 4, -4])
+MyList.print_sorted([])

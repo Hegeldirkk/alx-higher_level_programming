@@ -27,4 +27,8 @@ Now you can use it:
 	negative number
 	>>> MyList.print_sorted([1, 2, -3, 4, -4, 1])
 	[-4, -3, 1, 1, 2, 4]
+	
+	empty list
+	>>> MyList.print_sorted([])
+	[]
 
