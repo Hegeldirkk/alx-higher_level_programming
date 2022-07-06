@@ -8,8 +8,8 @@ Function: inherits_from
 
 def inherits_from(obj, a_class):
     """eturns True if the object is exactly
-     of a class that inherited (directly or indirectly) 
-     otherwise False.
+    of a class that inherited
+    (directly or indirectly)otherwise False.
     args: obj (variable)
     a_class (type test)
     """
