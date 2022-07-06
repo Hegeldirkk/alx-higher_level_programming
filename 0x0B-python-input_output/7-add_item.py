@@ -17,7 +17,7 @@ filename = "add_item.json"
 
 try:
     input_list = load_from_json_file(filename)
-except:
+except Exception as e:
     input_list = []
 
 for i in range(len(sys.argv))[1:]:
