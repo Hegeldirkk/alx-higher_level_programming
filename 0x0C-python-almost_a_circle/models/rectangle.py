@@ -56,7 +56,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter and getter x"""
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be > 0")
