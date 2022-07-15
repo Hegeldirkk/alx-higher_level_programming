@@ -29,9 +29,9 @@ class Rectangle(Base):
     def width(self, value):
         """setter and getter width"""
         if type(value) is not int:
-            raise Exception("width attributes must be an integer")
+            raise Exception("width must be an integer")
         elif value <= 0:
-            raise ValueError("width attributes must > 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -43,9 +43,9 @@ class Rectangle(Base):
     def height(self, value):
         """setter and getter height"""
         if type(value) is not int:
-            raise Exception("height attributes must be an integer")
+            raise Exception("height must be an integer")
         elif value <= 0:
-            raise ValueError("height attributes must > 0")
+            raise ValueError("height must >= 0")
         self.__height = value
 
     @property
@@ -57,9 +57,9 @@ class Rectangle(Base):
     def x(self, value):
         """setter and getter x"""
         if type(value) is not int:
-            raise Exception("x attributes must be an integer")
+            raise Exception("x must be an integer")
         elif value < 0:
-            raise ValueError("x attributes must > 0")
+            raise ValueError("x must be > 0")
         self.__x = value
 
     @property
@@ -71,7 +71,7 @@ class Rectangle(Base):
     def y(self, value):
         """setter and getter y"""
         if type(value) is not int:
-            raise Exception("y attributes must be an integer")
+            raise Exception("y must be an integer")
         elif value < 0:
-            raise ValueError("y attributes must > 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
