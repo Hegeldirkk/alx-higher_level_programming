@@ -67,7 +67,7 @@ class Rectangle(Base):
         """Private instance attributes x"""
         return self.__y
 
-    @x.setter
+    @y.setter
     def y(self, value):
         """setter and getter y"""
         if type(value) is not int:
