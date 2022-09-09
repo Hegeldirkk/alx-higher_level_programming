@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+<<<<<<< HEAD
 
 #######################################################################
 #                                                                     #
@@ -9,11 +10,22 @@
 #   (run: ./git)                                                      #
 #                                                                     #
 #######################################################################
+=======
+echo "#######################################################################"
+echo "#                                                                     #"
+echo "#   Bash script Automation (git command)                              #"
+echo "#                                                                     #"
+echo "#   commands to push your source code in your repository              #"
+echo "#   (run: ./git)                                                      #"
+echo "#                                                                     #"
+echo "#######################################################################"
+>>>>>>> 3f70d683966159b846f57f2b1c2ec58e3892bfa8
 
 git add .
 
 if [ -z "$GITCOMMIT" ]
 then
+<<<<<<< HEAD
 	echo " commit is empty\n"
 	echo "write some message:"
 	read commit
@@ -23,9 +35,24 @@ then
 	       read commit
        done
        export GITCOMMIT="script git writting - $commit"
+=======
+        echo "commit is empty"
+        echo "write some message:"
+        read -r commit
+        while [ -z "$commit" ]
+        do
+               echo "please write some message: "
+               read -r commit
+       done
+       export GITCOMMIT="script git writting js - $commit"
+>>>>>>> 3f70d683966159b846f57f2b1c2ec58e3892bfa8
 fi
 
 git commit -m "$GITCOMMIT"
 git push
 
+<<<<<<< HEAD
+=======
+echo " "
+>>>>>>> 3f70d683966159b846f57f2b1c2ec58e3892bfa8
 echo "code success | https://dirkk.ci"
