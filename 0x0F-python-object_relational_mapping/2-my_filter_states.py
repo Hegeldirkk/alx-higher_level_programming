@@ -19,7 +19,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    c.execute("""SELECT * FROM states WHERE name LIKE BINARY '{:s}'""".format(query))
+    c.execute("""SELECT * FROM states WHERE name LIKE BINARY '{:s}'
+              ORDER BY states.id ASC """.format(query))
     res = c.fetchall()
     for n in res:
         print(n)
