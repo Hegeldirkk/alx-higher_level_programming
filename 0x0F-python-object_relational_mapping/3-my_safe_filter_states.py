@@ -20,7 +20,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    c.execute("""SELECT * FROM states WHERE name = %s ORDER BY id ASC""", (query,))
+    c.execute("""SELECT * FROM states WHERE name = %s
+              ORDER BY id ASC""", (query,))
     res = c.fetchall()
 
     for n in res:
