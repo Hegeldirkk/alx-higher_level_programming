@@ -25,11 +25,13 @@ if __name__ == "__main__":
                  JOIN states
                  ON cities.state_id = states.id
                  WHERE states.name = %s
-                 ORDER BY cities.id""", (query,))
+                 ORDER BY cities.id;""", (query,))
     res = c.fetchall()
     for n in range(len(res)):
+        if n != 0:
+            print(", ", end='')
         if n is not None:
-            print(res[n][0], end=', ')
+            print(res[n][0], end='')
     print('')
     c.close()
     db.close()
