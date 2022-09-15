@@ -23,12 +23,11 @@ if __name__ == "__main__":
     session = Session()
 
     # - fetch the first value in database
-    state = session.query(State).filter(State.id == 1)
+    state = session.query(State).first()
 
     # - print value fetch
-    for n in state:
-        if n is None:
-            print('Nothing')
-        else:
-            print('{}: {}'.format(n.id, n.name))
+    if state is None:
+        print('Nothing')
+    else:
+        print('{}: {}'.format(state.id, state.name))
     session.close()
