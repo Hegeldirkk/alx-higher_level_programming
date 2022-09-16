@@ -14,7 +14,7 @@ from model_state import Base, State
 if __name__ == "__main__":
     # - connect to database
     engine = create_engine('mysql://{}:{}@localhost/{}'
-                          .format(argv[1], argv[2], argv[3]))
+                           .format(argv[1], argv[2], argv[3]))
 
     # - generated database schema
     Base.metadata.create_all(engine)
@@ -25,7 +25,6 @@ if __name__ == "__main__":
     session = Session()
 
     # - update value where id is 2
-    session.query(State).filter(State.id 
-                                == 2).update({"name": "New Mexico"})
+    session.query(State).filter(State.id == 2).update({"name": "New Mexico"})
     session.commit()
     session.close()
