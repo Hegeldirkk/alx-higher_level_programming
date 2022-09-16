@@ -25,12 +25,11 @@ if __name__ == "__main__":
     session = Session()
 
     # - fetch id by name in  database
-    state = session.query(State).filter(State.name.ilike(argv[4])).all()
+    state = session.query(State).filter(State.name.ilike(argv[4])).first()
 
     # - print id value
-    for n in state:
-        if n is None:
-            print('Not found')
-        else:
-            print('{}'.format(n.id))
+    if state is None:
+        print('Not found')
+    else:
+        print('{}'.format(state.id))
     session.close()
