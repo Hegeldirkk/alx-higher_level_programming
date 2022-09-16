@@ -25,8 +25,9 @@ if __name__ == "__main__":
     session = Session()
 
     # - fetch all data in db using a letter 'a'
-    state = session.query(State).filter(State.name.like("%a")).all()
+    state = session.query(State).filter(State.name.ilike("%a%")).all()
 
     # - print data
     for n in state:
         print('{}: {}'.format(n.id, n.name))
+    session.close()
