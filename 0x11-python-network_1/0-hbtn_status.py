@@ -5,11 +5,11 @@ Dev: Ikary Ryann
 Desc:Write a Python script that fetches https://alx-intranet.hbtn.io/status
 """
 if __name__ == "__main__":
-    from urllib import request
+    import urllib.request
 
-    with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-        res = response.read()
-        print('Body Response:')
-        print("\t- type: {}".format(type(res)))
-        print("\t- content: {}".format(res))
-        print("\t- utf8 content: {}".format(res.decode('utf-8')))
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as resp:
+        res = resp.read()
+    print('Body Response:')
+    print("\t- type: {}".format(type(res)))
+    print("\t- content: {}".format(res))
+    print("\t- utf8 content: {}".format(res.decode('utf-8')))
