@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
-Desc:Write a Python script that fetches https://alx-intranet.hbtn.io/status
+Program: Alx Africa
+Dev: Ikary Ryann
+Desc:Write a Python script that
+fetches https://alx-intranet.hbtn.io/status
 """
 if __name__ == "__main__":
     import urllib.request
