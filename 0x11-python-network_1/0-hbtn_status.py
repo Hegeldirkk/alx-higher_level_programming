@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """
-Program: Alx Africa
-Dev: Ikary Ryann
 Desc:Write a Python script that fetches https://alx-intranet.hbtn.io/status
 """
 if __name__ == "__main__":
