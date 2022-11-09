@@ -1,55 +1,62 @@
 #!/usr/bin/python3
-"""Write a class Square that defines a square by: (based on 5-square.py)"""
+"""
+Create a Class Square with:
+- size, position private propreties
+- method of area and method of print_square
+- getters & setters.
+"""
 
 
 class Square:
-    """Private instance attribute: size: in class square"""
+    """Class - Square"""
+
     def __init__(self, size=0, position=(0, 0)):
-        """main def contains Private instance attribute: size"""
-        self.__size = size
-        self.__position = position
+        """Constructor of a Square with the size and position"""
+        self.size = size
+        self.position = position
+
+    def area(self):
+        """Method to get the area of the Square"""
+        return (self.__size ** 2)
+
+    def my_print(self):
+        """Method to print a Square with spaces"""
+        if (self.__size == 0):
+            print()
+        else:
+            for blank in range(self.position[1]):
+                print()
+            for rows in range(self.__size):
+                print(" " * self.position[0], end='')
+                print("#" * self.__size)
 
     @property
     def size(self):
-        """property def size(self): to retrieve it"""
-        return self.__size
+        """Getter of the private attribute size"""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """property setter def size(self, value): to set it: """
-        self.__size = value
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
+        """Setter for the size private attribute"""
+        if (type(value) is not int):
+            raise (TypeError("size must be an integer"))
+        elif (value < 0):
+            raise (ValueError("size must be >= 0"))
+        else:
+            self.__size = value
 
     @property
     def position(self):
-        """property def position(self): to retrieve it"""
-        return self.__position
+        """Getter of Position"""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        """property setter def position(self, value): to set it"""
-        self.__position = value
-        if (type(value) is not tuple or len(value) != 2 or
-                not all(isinstance(n, int) for n in size_value) or
-                not all(n >= 0 for n in value)):
+        """Setter of position"""
+        if (len(value) != 2) or (type(value) is not tuple) \
+                or (type(value[0]) is not int) \
+                or (type(value[1]) is not int) \
+                or (value[0] < 0) or (value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-
-    def area(self):
-        """Public instance method that returns the current square area"""
-        return (self.__size * self.__size)
-
-    def my_print(self):
-        """that prints in stdout the square with the character #"""
-        if self.__size == 0:
-            print("", end="\n")
         else:
-            for i in range(0, self.__position[1]):
-                [print("")]
-            for n in range(0, self.__size):
-                [print(" ", end="") for j in range(0, self.__position[0])]
-                for i in range(0, self.__size):
-                    print("#", end="")
-                print("", end="\n")
+            self.__position = value
